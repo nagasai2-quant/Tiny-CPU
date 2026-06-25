@@ -119,7 +119,6 @@ always @(posedge clk) begin
     sel <= 1'b0;
     wrtenb <= 1'b0;
     jump_en <= 1'b0;
-    // raddr <= inst[15:4];
     case(inst[19:16]) 
     4'b0000 : opcode <= inst[19:16];  
     4'b0001 : opcode <= inst[19:16];  
