@@ -139,21 +139,21 @@ always @(posedge clk) begin
       jump_ad <= inst[3:0];          //Jump addr
       jump_en <= 1'b1;
     end
-    4'b0111 : begin                  //BEQ
+    4'b0111 : begin                  //BEQ : Branch if equal
       if(flags == 3'b100) begin
         jump_ad <= inst[3:0];
         jump_en <= 1'b1;
         $display(" BEQ triggered -> %d",inst[3:0]);
       end
     end
-    4'b1000 : begin                  //BGT
+    4'b1000 : begin                  //BGT : Branch if greater
       if(flags == 3'b010) begin
         jump_ad <= inst[3:0];
         jump_en <= 1'b1;
         $display(" BGT triggered -> %d",inst[3:0]);
       end
     end
-    4'b1001 : begin                  //BLT
+    4'b1001 : begin                  //BLT : Branch if lesser
       if(flags == 3'b001) begin
         jump_ad <= inst[3:0];
         jump_en <= 1'b1;
@@ -161,7 +161,7 @@ always @(posedge clk) begin
       end
     end
 
-    4'b1111 : begin
+    4'b1111 : begin 
       pcen <= 1'b0;
     end
     endcase
@@ -223,7 +223,7 @@ always @(*) begin
 end
 endmodule
 
-module pccounter(clk,pcen,out,rst,jump_ad,jump_en);
+module pccounter(clk,pcen,out,rst,jump_ad,jump_en); //Program counter
 input rst,clk,pcen,jump_en;
 input [3:0] jump_ad;
 output reg [3:0] out;
@@ -240,7 +240,7 @@ always @(posedge clk) begin
 end;
 endmodule
 
-module rom(addr,data);
+module rom(addr,data); // Read only memory : - > Instruction set
 input [3:0] addr;
 output reg [19:0] data;
 
@@ -265,7 +265,7 @@ always @(*) begin
 end
 endmodule
 
-module ram(addr,clk,wrtenb,datai,dataout);
+module ram(addr,clk,wrtenb,datai,dataout); // Random Access memory
 input [3:0] addr;
 input [3:0] datai;
 input wrtenb,clk;
@@ -297,7 +297,7 @@ always @(*) begin
 end
 endmodule
 
-module Regfile(we,clk,addr,wdata,wregdat,dataA,dataB,sel);
+module Regfile(we,clk,addr,wdata,wregdat,dataA,dataB,sel); // Register files
 input we,clk,sel;
 input [11:0] addr;
 input [3:0] wdata,wregdat;
