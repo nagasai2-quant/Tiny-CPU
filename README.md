@@ -15,24 +15,14 @@ BGT - Branches to a location if operand it greater than mentioned value
 
 **Architecture :** 
 
-**Program Counter
-      |
-      V
-Instruction Memory (ROM)
-      |
-      V
-Instruction Register
-      |
-      V
- Control Unit (FSM)
-      |
-      V
-Register  <->  RAM
-      |
-      V
+**Program Counter -  >
+Instruction Memory (ROM) - >
+Instruction Register - >
+ Control Unit (FSM) - >
+ [ Register  <->  RAM ]
+     - > 
      ALU
-      |
-      V 
+      - > 
    WriteBack**
       
 
