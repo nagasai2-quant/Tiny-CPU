@@ -14,7 +14,7 @@ A simple 4 Bit CPU built using Verilog HDL , following Harvard Architecture by p
 10. BGT - Branches to a location if operand it greater than mentioned value
 
 **Architecture :** 
-
+_
 **Program Counter -  >
 Instruction Memory (ROM) - >
 Instruction Register - >
@@ -23,7 +23,7 @@ Instruction Register - >
      - > 
      ALU
       - > 
-   WriteBack**
+   WriteBack**_
       
 
 **Features :**
