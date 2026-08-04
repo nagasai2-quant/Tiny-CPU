@@ -2,16 +2,16 @@
 A simple 4 Bit CPU built using Verilog HDL , following Harvard Architecture by performing operation from ROM and seperate RAM for Data related operations
 
 **Supports Various Functions as :**
-AND - performs AND operation on 2 operands
-OR - performs OR operation on 2 operands
-XOR - performs XOR operation on 2 operands
-NAND - performs NAND operation on 2 operands
-LOAD - Loads a value from RAM to Register
-STORE - Stores a value from Register to RAM
-JMP - Jumps to a particular location
-BLT - Branches to a location if operand it less than mentioned value
-BEQ - Branches to a location if operand it equal to the mentioned value
-BGT - Branches to a location if operand it greater than mentioned value
+1. AND - performs AND operation on 2 operands
+2. OR - performs OR operation on 2 operands
+3. XOR - performs XOR operation on 2 operands
+4. NAND - performs NAND operation on 2 operands
+5. LOAD - Loads a value from RAM to Register
+6. STORE - Stores a value from Register to RAM
+7. JMP - Jumps to a particular location
+8. BLT - Branches to a location if operand it less than mentioned value
+9. BEQ - Branches to a location if operand it equal to the mentioned value
+10. BGT - Branches to a location if operand it greater than mentioned value
 
 **Architecture :** 
 
