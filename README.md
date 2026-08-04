@@ -37,14 +37,14 @@ Register  <->  RAM
       
 
 **Features :**
-Harvard Architecture
-Fetch - Decode - Execute Cycle
-FSM Based Control Unit
-Register and RAM for Memory Handling
-Program Counter
-Instruction Register
-Conditional Branching
-Unconditional Jump
+1. Harvard Architecture
+2. Fetch - Decode - Execute Cycle
+3. FSM Based Control Unit
+4. Register and RAM for Memory Handling
+5. Program Counter
+6. Instruction Register
+7. Conditional Branching
+8. Unconditional Jump
 
 
 **Future Improvements :**
